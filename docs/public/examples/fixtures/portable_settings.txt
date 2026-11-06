@@ -1,0 +1,6 @@
+Servers\Demo\Host	1	127.0.0.1
+Servers\Demo\User	1	analyst
+Servers\Demo\NetType	3	2
+Servers\Demo\SSHtunnelHost	1	127.0.0.1
+Servers\Demo\SSHtunnelUser	1	deploy
+Servers\Demo\SSHtunnelPrivateKey	1	C:\keys\example.ppk
