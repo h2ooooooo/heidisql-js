@@ -5,8 +5,8 @@ Read HeidiSQL registry sessions, registry exports and typed portable settings. D
 ## Install and read profiles
 
 ~~~sh
-npm install @jalsoedesign/heidisql-core@rc
-npm install --global @jalsoedesign/heidisql-cli@rc
+npm install @jalsoedesign/heidisql-core
+npm install --global @jalsoedesign/heidisql-cli
 ~~~
 
 ~~~ts

@@ -5,7 +5,7 @@ Read saved sessions, select one by exact path and search connection metadata. Th
 ## Install
 
 ```sh
-npm install @jalsoedesign/heidisql-core@rc
+npm install @jalsoedesign/heidisql-core
 ```
 
 Use Node.js 22.22.2 or newer. Follow [language setup](/guide/examples) for TypeScript tooling and JavaScript module configuration.

@@ -5,7 +5,7 @@ List, search and select a synthetic saved session without reading installed sett
 ## Install
 
 ```sh
-npm install --global @jalsoedesign/heidisql-cli@rc
+npm install --global @jalsoedesign/heidisql-cli
 ```
 
 For project-local use, install without `--global` and prefix commands with `npm exec --`. See [runtime requirements](/guide/installation).
