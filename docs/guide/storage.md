@@ -64,3 +64,5 @@ Database and SSH tunnel endpoints are independent. The native SSH port field is 
 Executable/version metadata is evidence from inspection when available, not a guarantee for every explicit path. Native session values remain separate from the normalized projection.
 
 The existing-file probe establishes portable selection only when that file exists. With no readable portable file and no portable.lock evidence, the current executable probe can fall back to registry storage. This is discovery evidence rather than proof of every launcher override; choose the explicit native source when the running store cannot be established.
+
+For an explicit live operation after selecting a profile, use [the shared connection walkthrough](/api/integration). Native-only execution requirements are represented as `unsupportedOptions`; reading a profile does not grant permission to discard them.

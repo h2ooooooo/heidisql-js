@@ -74,3 +74,21 @@ test('invalid options fail as parseable JSON', () => {
     assert.equal(result.status, 1);
     assert.match(JSON.parse(result.stderr).error, /Registry view/);
 });
+
+test('database and SSH execution definitions remain independently selectable', () => {
+    const source = HeidiSqlProfileSource.fromSessions({id: 'fixture', application: 'heidisql'}, [{
+        name: 'database', settings: {
+            Host: 'database.internal', User: 'database-user', NetType: '2',
+            SSHtunnelHost: 'gateway.example', SSHtunnelUser: 'ssh-user',
+        },
+    }]);
+    const profile = source.get('database');
+
+    assert.equal(profile.connections[0].kind, 'database');
+    assert.deepEqual(profile.connections[0].via, ['ssh']);
+    assert.equal(profile.connections[1].protocol, 'ssh');
+    assert.equal(profile.connections[1].endpoint.host, 'gateway.example');
+    assert.equal(profile.connections[1].endpoint.username, 'ssh-user');
+    assert.equal(profile.connections[1].authentication[0].credential.kind, 'password');
+    assert.ok(!JSON.stringify(profile).includes('value'));
+});

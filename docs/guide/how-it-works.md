@@ -57,3 +57,7 @@ Native settings can contain stored credential representations, so inspect select
 A source is a snapshot; reopen it after native settings change. A database client is responsible for queries, imports and exports. An SSH implementation is responsible for a live tunnel and host verification.
 
 Start with the [API example](/api/quick-start), [CLI example](/cli/quick-start) or [tunnel example](/guide/tunnels). [Profile writing](/guide/writing) is a separate preview/apply workflow with application, revision and lock checks.
+
+## Shared execution after native interpretation
+
+The source now exposes normalized execution details alongside metadata. `@jalsoedesign/portline-dockline` performs the shared mapping and delegates live sessions to optional Dockline clients. Native-only requirements appear in `unsupportedOptions`; they are refused rather than dropped. Read [the scoped source-to-session walkthrough](/api/integration) for supported operations and explicit trust/authentication options.
